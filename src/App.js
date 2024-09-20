@@ -33,7 +33,7 @@ function App() {
       <header className="hero">
         <div className="container">
           <div className="profile-photo">
-            <img src={`${process.env.PUBLIC_URL}/web/portait.JPG`} alt="That's me :)" />
+            <img src={`https://errezeeta.github.io/web/portait.JPG`} alt="That's me :)" />
           </div>
 
           <h1>Hi! I'm Javier Ramírez</h1>
