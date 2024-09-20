@@ -1,38 +1,203 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.landing-page {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.hero {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 100px 0;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero p {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.profile-photo {
+  margin-bottom: 20px;
+}
+
+.profile-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4caf50;
+}
+
+.cta-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.1s ease-out;
+  position: relative;
+  z-index: 2; /* Asegura que esté en la capa correcta */
+}
+
+.cta-button:hover {
+  background-color: #45a049;
+}
+
+.about-section,
+.projects-section,
+.contact-section {
+  padding: 60px 0;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.project-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-card {
+  background-color: #1e1e1e;
+  border-radius: 5px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.project-card h3 {
+  color: #4caf50;
+}
+
+footer {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 20px 0;
+}
+/* Resto del código */
+
+.hero {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden; /* Para contener la animación */
+}
+
+.hero h1 {
+  font-size: 48px;
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+  font-size: 24px;
+  margin: 20px 0;
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.profile-photo {
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4caf50;
+  position: relative;
+  z-index: 1;
+}
+
+/* Barrido de luz */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(25deg);
+  z-index: 0;
+  animation: lightSweep 5s infinite ease-in-out;
+}
+
+@keyframes lightSweep {
+  0% {
+    transform: translateX(-100%) rotate(25deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(25deg);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Animación de fade in para los textos */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Estilo para el hero con parallax */
+.hero {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden; /* Para contener los elementos en movimiento */
+  height: 100vh; /* Para cubrir toda la pantalla */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  perspective: 1000px; /* Da una sensación de profundidad */
 }
 
-.App-link {
-  color: #61dafb;
+.hero h1, .hero p, .profile-photo {
+  position: relative;
+  z-index: 2; /* Asegura que los elementos están sobre el fondo */
+  transition: transform 0.1s ease-out; /* Para un movimiento suave */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4caf50;
+  position: relative;
 }
+
