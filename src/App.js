@@ -33,8 +33,9 @@ function App() {
       <header className="hero">
         <div className="container">
           <div className="profile-photo">
-            <img src="/portait.JPG" alt="That's me :)" />
+            <img src={`${process.env.PUBLIC_URL}/portait.JPG`} alt="That's me :)" />
           </div>
+
           <h1>Hi! I'm Javier Ramírez</h1>
           <p>Telematics Engineer | UX Engineer | Data Visualization Specialist</p>
           <br></br>
