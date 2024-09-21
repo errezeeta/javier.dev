@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/javier.dev/static/css/main.c93d8d04.chunk.css",
-    "main.js": "/javier.dev/static/js/main.4b4ab2a3.chunk.js",
-    "main.js.map": "/javier.dev/static/js/main.4b4ab2a3.chunk.js.map",
+    "main.css": "/javier.dev/static/css/main.98eaff6d.chunk.css",
+    "main.js": "/javier.dev/static/js/main.460d29ae.chunk.js",
+    "main.js.map": "/javier.dev/static/js/main.460d29ae.chunk.js.map",
     "runtime~main.js": "/javier.dev/static/js/runtime~main.dfd02da7.js",
     "runtime~main.js.map": "/javier.dev/static/js/runtime~main.dfd02da7.js.map",
     "static/js/2.ca150098.chunk.js": "/javier.dev/static/js/2.ca150098.chunk.js",
@@ -10,8 +10,8 @@
     "static/js/3.940f5f6f.chunk.js": "/javier.dev/static/js/3.940f5f6f.chunk.js",
     "static/js/3.940f5f6f.chunk.js.map": "/javier.dev/static/js/3.940f5f6f.chunk.js.map",
     "index.html": "/javier.dev/index.html",
-    "precache-manifest.0326442e33a8378dc7a84ff57406d396.js": "/javier.dev/precache-manifest.0326442e33a8378dc7a84ff57406d396.js",
+    "precache-manifest.9608cf24a25c5c09991565f0ebdac10c.js": "/javier.dev/precache-manifest.9608cf24a25c5c09991565f0ebdac10c.js",
     "service-worker.js": "/javier.dev/service-worker.js",
-    "static/css/main.c93d8d04.chunk.css.map": "/javier.dev/static/css/main.c93d8d04.chunk.css.map"
+    "static/css/main.98eaff6d.chunk.css.map": "/javier.dev/static/css/main.98eaff6d.chunk.css.map"
   }
 }
