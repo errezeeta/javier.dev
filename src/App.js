@@ -98,7 +98,7 @@ function App() {
               <br></br>
               <p>In my final university project, I collaborated on the Classpip project, a free open source gamification initiative where I made improvements and implemented a geocaching mode using geolocation, OpenStreetMaps APIs...</p>
               <div className="image-container">
-                <img src={url+'images/classpip_demo.gif'} alt={"Classpip"} />
+                <img src={url+'images/classpip_demo1.gif'} alt={"Classpip"} />
               </div>
 
               <p>
