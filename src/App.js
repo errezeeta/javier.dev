@@ -100,6 +100,13 @@ function App() {
               <div className="image-container">
                 <img src={url+'images/classpip_demo.gif'} alt={"Classpip"} />
               </div>
+
+              <p>
+                If you are more interested in my thesis, you can download the project report {" "}
+                 <a href={url + 'assets/JRM_thesis.pdf'} target="_blank" rel="noopener noreferrer"  class='link'> 
+                here
+                </a>.
+              </p>
               <br></br>
               <br></br>
               <a href="https://github.com/Angelfm98/classpip-dashboard/tree/branch_javi" className="cta-button">View on GitHub</a>

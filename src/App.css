@@ -104,6 +104,11 @@ h2 {
   border-radius: 5px; /* Bordes redondeados para la imagen */
 }
 
+.link {
+  color: rgb(48, 114, 236);
+  text-decoration: underline;
+}
+
 footer {
   background-color: #1e1e1e;
   color: white;
