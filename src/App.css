@@ -91,6 +91,19 @@ h2 {
   color: #4caf50;
 }
 
+.image-container {
+  background-color: white; /* Fondo blanco para el cuadro de la imagen */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  text-align: center; /* Centra la imagen */
+  margin: 10px 0; /* Margen superior e inferior */
+}
+
+.image-container img {
+  max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
+  border-radius: 5px; /* Bordes redondeados para la imagen */
+}
+
 footer {
   background-color: #1e1e1e;
   color: white;

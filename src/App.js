@@ -66,7 +66,7 @@ function App() {
           </div>
 
           <h1>Hi! I'm Javier Ramírez</h1>
-          <p>Telematics Engineer | UX Engineer | Data Visualization Specialist</p>
+          <p>Telematics Engineer | Software Developer | Data Visualization Specialist</p>
           <br></br>
           <a href="#projects" className="cta-button">See My Projects</a>
         </div>
@@ -94,9 +94,15 @@ function App() {
           <h2>Projects</h2>
           <div className="project-list">
             <div className="project-card">
-              <h3>Project 1</h3>
-              <p>Brief description of your project.</p>
-              <a href="https://github.com/your-profile/project1" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+              <h3>My University Thesis</h3>
+              <br></br>
+              <p>In my final university project, I collaborated on the Classpip project, a free open source gamification initiative where I made improvements and implemented a geocaching mode using geolocation, OpenStreetMaps APIs...</p>
+              <div className="image-container">
+                <img src={url+'images/classpip_demo.gif'} alt={"Classpip"} />
+              </div>
+              <br></br>
+              <br></br>
+              <a href="https://github.com/Angelfm98/classpip-dashboard/tree/branch_javi" className="cta-button">View on GitHub</a>
             </div>
             <div className="project-card">
               <h3>Project 2</h3>
