@@ -1,10 +1,31 @@
 
 import './App.css';
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 
 
 function App() {
-    // Añadir el efecto parallax en el movimiento del ratón
+    const url = 'https://errezeeta.github.io/javier.dev/'; // URL para la foto
+
+    // Estado para mostrar u ocultar la flecha
+    const [showArrow, setShowArrow] = useState(true);
+
+    // Función para manejar el scroll
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setShowArrow(false); // Oculta la flecha cuando se hace scroll hacia abajo
+      } else {
+        setShowArrow(true);  // Muestra la flecha si el scroll está al inicio
+      }
+    };
+
+    const scrollToSection = () => {
+      console.log("acruiv")
+      const section = document.getElementById("about"); // Selecciona la siguiente sección
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" }); // Scroll suave hacia la sección
+      }
+    };  
+
     useEffect(() => {
       const handleMouseMove = (event) => {
         const { clientX, clientY } = event;
@@ -27,19 +48,31 @@ function App() {
       };
     }, []);
 
+    useEffect(() => {
+      window.addEventListener("scroll", handleScroll);
+  
+      // Limpieza del evento de scroll cuando el componente se desmonta
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
   return (
     <div className="landing-page">
       {/* Hero Section */}
       <header className="hero">
         <div className="container">
           <div className="profile-photo">
-            <img src={`https://errezeeta.github.io/web/portait.JPG`} alt="That's me :)" />
+            <img src={url + `portait.JPG`} alt="That's me :)" />
           </div>
 
           <h1>Hi! I'm Javier Ramírez</h1>
           <p>Telematics Engineer | UX Engineer | Data Visualization Specialist</p>
           <br></br>
           <a href="#projects" className="cta-button">See My Projects</a>
+        </div>
+
+        <div className={`scroll-arrow ${!showArrow ? 'hidden' : ''}`} onClick={scrollToSection}>
+          <span>▼</span>
         </div>
       </header>
 

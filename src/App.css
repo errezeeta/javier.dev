@@ -102,8 +102,13 @@ footer {
   background-color: #1e1e1e;
   color: white;
   padding: 100px 0;
+  height: 100vh; /* Cubrirá toda la pantalla */
   position: relative;
   overflow: hidden; /* Para contener la animación */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero h1 {
@@ -125,6 +130,22 @@ footer {
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
+}
+
+.scroll-arrow {
+  position: absolute;
+  bottom: 20px;
+  font-size: 24px;
+  color: white;
+  animation: bounce 1.5s infinite;
+  z-index: 10; /* Asegura que la flecha esté sobre los demás elementos */
+  opacity: 1; /* Aparecerá inicialmente */
+  transition: opacity 0.5s ease-in-out; /* Transición suave */
+  cursor: pointer;
+}
+
+.scroll-arrow.hidden {
+  opacity: 0; /* Desaparece */
 }
 
 .profile-photo img {
@@ -169,6 +190,17 @@ footer {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
   }
 }
 /* Estilo para el hero con parallax */
