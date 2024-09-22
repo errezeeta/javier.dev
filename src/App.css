@@ -55,10 +55,34 @@ body {
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.1s ease-out;
   position: relative;
-  z-index: 2; /* Asegura que esté en la capa correcta */
+  z-index: 2;
+  display: inline-block;   /* Permite que el botón ajuste su tamaño según el contenido */
+  white-space: nowrap;     /* Evita que el texto salte a la siguiente línea */
+  text-align: center;      /* Centra el texto */
+  overflow: hidden; 
 }
 
 .cta-button:hover {
+  background-color: #45a049;
+}
+
+.button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.1s ease-out;
+  position: relative;
+  z-index: 2;
+  display: inline-block;   /* Permite que el botón ajuste su tamaño según el contenido */
+  white-space: nowrap;     /* Evita que el texto salte a la siguiente línea */
+  text-align: center;      /* Centra el texto */
+  overflow: hidden;
+  margin: 10px;
+}
+
+.button:hover {
   background-color: #45a049;
 }
 

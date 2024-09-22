@@ -109,17 +109,17 @@ function App() {
               </p>
               <br></br>
               <br></br>
-              <a href="https://github.com/Angelfm98/classpip-dashboard/tree/branch_javi" className="cta-button">View on GitHub</a>
+              <a href="https://github.com/Angelfm98/classpip-dashboard/tree/branch_javi" className="button">View on GitHub</a>
             </div>
             <div className="project-card">
               <h3>My work at IEEC</h3>
-              <p>In my two years of work at the Institut d'Estudis Espacials de Catalunya I have been part of the Gaia4Sustainability project, in this project dedicated to the outreach of issues related to light pollution and the effects it produces in our lives. As part of G4S, I worked on the FreeDSM project, the development of a device capable of measuring the amount of irradiance of a location in an affordable and long-lasting way to compare it with the measurements obtained from the Gaia satellite and thus obtain the amount of light pollution. As part of this infrastructure I developed, for example, a model that would represent, at the desired time and place, the amount of irradiance received at that moment according to various astronomical parameters, in addition to implementing backends in flask, docker...</p>
+              <p>In my two years of work at the Institut d'Estudis Espacials de Catalunya I have been part of the Gaia4Sustainability project, in this project dedicated to the outreach of issues related to light pollution and the effects it produces in our lives. <br></br><br></br> As part of G4S, I worked on the FreeDSM project, the development of a device capable of measuring the amount of irradiance of a location in an affordable and long-lasting way to compare it with the measurements obtained from the Gaia satellite and thus obtain the amount of light pollution. <br></br><br></br> As part of this infrastructure I developed, for example, a model that would represent, at the desired time and place, the amount of irradiance received at that moment according to various astronomical parameters, in addition to implementing backends in flask, docker...</p>
               <div className="image-container">
                 <img src={url+'images/gambons_demo.gif'} alt={"G4S model"} />
               </div>
               <br></br>
               <br></br>
-              <a href="https://gaia4sustainability.eu/gaia-4-sustainability/" className="cta-button">Visit G4S</a><a href="https://gaia4sustainability.eu/gambons/" className="cta-button">Visit Irradiance Model</a>
+              <a href="https://gaia4sustainability.eu/gaia-4-sustainability/" className="button">Visit G4S</a><a href="https://gaia4sustainability.eu/gambons/" className="button">Visit Irradiance Model</a>
             </div>
           </div>
         </div>
@@ -131,7 +131,7 @@ function App() {
           <h2>Contact</h2>
           <p>If you're interested in collaborating or have any questions, feel free to reach out!</p>
           <br></br>
-          <a href="mailto:jramirezsamc@gmail.com" className="cta-button">Send an Email</a>
+          <a href="mailto:jramirezsamc@gmail.com" className="button">Send an Email</a>
         </div>
       </section>
 
