@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a3e9d5530bce3a5aaf0bcd8b45b230ad",
+    "revision": "c2aff87e93bd6227add7fc1b0f82a7b5",
     "url": "/javier.dev/index.html"
   },
   {
-    "revision": "fe91c1329b52c06aac48",
-    "url": "/javier.dev/static/css/main.423068c0.chunk.css"
+    "revision": "3a099e01cd67a78d5278",
+    "url": "/javier.dev/static/css/main.e9813550.chunk.css"
   },
   {
     "revision": "1582e325d1bcf091e744",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/javier.dev/static/js/3.940f5f6f.chunk.js"
   },
   {
-    "revision": "fe91c1329b52c06aac48",
-    "url": "/javier.dev/static/js/main.ab8da6e3.chunk.js"
+    "revision": "3a099e01cd67a78d5278",
+    "url": "/javier.dev/static/js/main.7ac7a27d.chunk.js"
   },
   {
     "revision": "126641896b4830c4b490",
