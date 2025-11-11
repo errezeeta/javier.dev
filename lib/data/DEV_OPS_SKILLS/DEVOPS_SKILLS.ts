@@ -1,0 +1,18 @@
+import { AWS_SKILLS } from '@/lib/data/DEV_OPS_SKILLS/AWS_SKILLS'
+import { DEVOPS_OTHER_SKILLS } from '@/lib/data/DEV_OPS_SKILLS/DEVOPS_OTHER_SKILLS'
+import { KUBERNETES_SKILLS } from '@/lib/data/DEV_OPS_SKILLS/KUBERNETES_SKILLS'
+import { ISkill } from '@/lib/types/ISkill'
+
+export const DEVOPS_SKILLS: ISkill = {  
+  name: 'DevOps',
+  level: 80,
+  since: 2022,
+  description: "I have been working with DevOps since 2022. Creating CI/CD pipelines and managing containers and orchestration tools.",
+  subSkills: [
+    AWS_SKILLS,
+    KUBERNETES_SKILLS,
+    DEVOPS_OTHER_SKILLS,
+  ]
+}
+
+
