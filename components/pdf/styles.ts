@@ -24,16 +24,16 @@ export const styles = StyleSheet.create({
   name: {
     fontSize: 24,
     fontFamily: "Helvetica-Bold",
-    marginBottom: 2,
+    marginBottom: 4,
   },
   title: {
     fontSize: 11,
     color: colors.muted,
+    marginBottom: 0,
   },
   contactRow: {
     flexDirection: "row",
     justifyContent: "center",
-    gap: 16,
     marginBottom: 20,
     flexWrap: "wrap",
   },
@@ -48,6 +48,7 @@ export const styles = StyleSheet.create({
     fontSize: 9,
     color: colors.muted,
     textDecoration: "none",
+    marginRight: 16,
   },
   section: {
     marginBottom: 16,
@@ -134,13 +135,13 @@ export const styles = StyleSheet.create({
   subSkillRow: {
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: 4,
     marginBottom: 2,
   },
   subSkillLabel: {
     fontSize: 9,
     fontFamily: "Helvetica-Bold",
     color: colors.muted,
+    marginRight: 4,
   },
   subSkillList: {
     fontSize: 9,
@@ -166,12 +167,12 @@ export const styles = StyleSheet.create({
   },
   languageRow: {
     flexDirection: "row",
-    gap: 8,
     marginBottom: 3,
   },
   languageName: {
     fontSize: 10,
     fontFamily: "Helvetica-Bold",
+    marginRight: 8,
   },
   languageProficiency: {
     fontSize: 10,
@@ -180,7 +181,6 @@ export const styles = StyleSheet.create({
   interestsContainer: {
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: 6,
   },
   interestBadge: {
     fontSize: 9,
@@ -192,6 +192,8 @@ export const styles = StyleSheet.create({
     borderWidth: 0.5,
     borderColor: colors.border,
     borderStyle: "solid" as const,
+    marginRight: 6,
+    marginBottom: 6,
   },
   footerContact: {
     marginTop: 16,

@@ -17,7 +17,7 @@ import { ISkill } from "@/lib/types/ISkill";
 const EMAIL = "jramirezsamc@gmail.com";
 const GITHUB = "https://github.com/errezeeta";
 const LINKEDIN = "https://www.linkedin.com/in/javier-rz/";
-const WEBSITE = "https://errezeeta.github.io/javier.dev/";
+const WEBSITE = "https://www.errezeeta.com/";
 
 function SubSkillList({ skills }: { skills: ISkill[] }) {
   return (
