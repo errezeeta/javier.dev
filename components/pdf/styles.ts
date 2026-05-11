@@ -24,12 +24,11 @@ export const styles = StyleSheet.create({
   name: {
     fontSize: 24,
     fontFamily: "Helvetica-Bold",
-    marginBottom: 4,
+    marginBottom: 6,
   },
   title: {
     fontSize: 11,
     color: colors.muted,
-    marginBottom: 0,
   },
   contactRow: {
     flexDirection: "row",

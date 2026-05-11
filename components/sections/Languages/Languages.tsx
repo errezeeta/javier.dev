@@ -7,7 +7,7 @@ export default function Languages() {
       <div className="flex flex-col gap-4 print:hidden">
         {LANGUAGES.map((language, index) => (
           <div key={index} className="flex flex-col gap-1">
-            <h3 className="text-lg font-bold">{language.name}</h3>
+            <h3 className="text-lg font-bold">{language.flag} {language.name}</h3>
             <p className="text-md">{language.proficiency}</p>
           </div>
         ))}
@@ -15,7 +15,7 @@ export default function Languages() {
       <div className="hidden print:flex flex-col gap-1 ">
         {LANGUAGES.map((language, index) => (
           <div key={index} className="flex flex-row gap-1">
-            <h3 className="text-md">{language.name}:</h3>
+            <h3 className="text-md">{language.flag} {language.name}:</h3>
             <p className="text-md">{language.proficiency}</p>
           </div>
         ))}
