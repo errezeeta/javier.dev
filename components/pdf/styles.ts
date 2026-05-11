@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
   name: {
     fontSize: 24,
     fontFamily: "Helvetica-Bold",
-    marginBottom: 6,
+    marginBottom: 12,
   },
   title: {
     fontSize: 11,
