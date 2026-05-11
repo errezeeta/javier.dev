@@ -8,7 +8,7 @@ export const BACKEND_SKILLS: ISkill = {
   name: 'Backend',
   since: 2019,
   level: 50,
-  description: 'Although backend is not my primary focus, I have significant experience in backend development: I have built servers and APIs and implemented various integrations.',
+  description: 'I have strong backend experience building scalable APIs and services. I work extensively with Express, Prisma, PostgreSQL, and event-driven architectures.',
   subSkills: [
     DATABASES_SKILLS,
     API_SKILLS,

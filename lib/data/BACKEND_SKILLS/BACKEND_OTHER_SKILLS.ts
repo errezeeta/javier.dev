@@ -5,10 +5,10 @@ export const BACKEND_OTHER_SKILLS: ISkill = {
   description:
     "I like experimenting with different technologies and frameworks to find the best tool for the job.",
   subSkills: [
-    { name: "R" },
-    { name: "Java" },
+    { name: "SQS" },
+    { name: "Event-driven" },
     { name: "Git" },
     { name: "Bash" },
-    { name: "Version Control" },
+    { name: "Rate Limiting" },
   ],
 };

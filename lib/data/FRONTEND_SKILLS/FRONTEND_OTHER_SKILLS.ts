@@ -5,8 +5,13 @@ export const FRONTEND_OTHER_SKILLS: ISkill = {
   description:
     "I like experimenting with different technologies and frameworks to find the best tool for the job.",
   subSkills: [
+    { name: "Recharts" },
+    { name: "Leaflet" },
+    { name: "Monaco Editor" },
+    { name: "dnd-kit" },
+    { name: "ExcelJS" },
+    { name: "next-intl" },
     { name: "Python - Flask" },
-    { name: "Flutter" },
     { name: "HTML5" },
     { name: "CSS3" },
   ],

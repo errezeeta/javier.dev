@@ -4,6 +4,6 @@ export const TYPESCRIPT_SKILLS: ISkill = {
   name: "Typescript",
   since: 2017,
   description:
-    "I created a complex frontend application using Typescript and Next.js. I use Typescript in all my javascript projects.",
+    "TypeScript is my default for all projects. I use shared type packages, Prisma inferred types, and strict configurations across monorepos.",
   subSkills: [],
 };

@@ -9,9 +9,9 @@ import { FRONTEND_OTHER_SKILLS } from "./FRONTEND_OTHER_SKILLS";
 export const FRONTEND_SKILLS: ISkill = {
   name: "Frontend",
   since: 2018,
-  level: 75,
+  level: 85,
   description:
-    "I have extensive experience in frontend development, creating responsive and user-friendly interfaces using modern frameworks and technologies.",
+    "Frontend is my primary focus. I build complex, responsive applications with Next.js 14, Server Components, and modern UI libraries.",
   subSkills: [
     TYPESCRIPT_SKILLS,
     NEXT_SKILLS,

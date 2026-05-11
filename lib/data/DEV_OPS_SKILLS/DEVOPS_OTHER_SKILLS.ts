@@ -6,11 +6,11 @@ export const DEVOPS_OTHER_SKILLS: ISkill = {
     "I managed servers and used deployment tools since I started programming",
   subSkills: [
     { name: "CI/CD" },
-    { name: "CDN" },
-    { name: "GitActions" },
-    { name: "Mintlify" },
+    { name: "GitHub Actions" },
+    { name: "Turborepo" },
+    { name: "esbuild" },
     { name: "Docker" },
+    { name: "CDN" },
     { name: "SSH" },
-    { name: "Observability" },
   ],
 };
