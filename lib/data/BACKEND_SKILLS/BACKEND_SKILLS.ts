@@ -7,8 +7,8 @@ import { ISkill } from '@/lib/types/ISkill';
 export const BACKEND_SKILLS: ISkill = {  
   name: 'Backend',
   since: 2019,
-  level: 50,
-  description: 'I have strong backend experience building scalable APIs and services. I work extensively with Express, Prisma, PostgreSQL, and event-driven architectures.',
+  level: 60,
+  description: 'I have strong backend experience building scalable APIs and services. I work extensively with Express, Prisma, PostgreSQL, and event-driven architectures. I also build AI-powered automation with LLM agents and MCP.',
   subSkills: [
     DATABASES_SKILLS,
     API_SKILLS,

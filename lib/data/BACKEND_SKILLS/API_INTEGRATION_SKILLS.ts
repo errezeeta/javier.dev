@@ -8,6 +8,7 @@ export const API_INTEGRATION_SKILLS: ISkill = {
   subSkills: [
     { name: "IoT Sensors" },
     { name: "OpenAI" },
+    { name: "Gemini" },
     { name: "Resend" },
     { name: "Svix" },
     { name: "PostHog" },

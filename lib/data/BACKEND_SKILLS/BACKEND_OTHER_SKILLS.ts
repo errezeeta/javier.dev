@@ -7,6 +7,8 @@ export const BACKEND_OTHER_SKILLS: ISkill = {
   subSkills: [
     { name: "SQS" },
     { name: "Event-driven" },
+    { name: "MCP" },
+    { name: "LLM Agents" },
     { name: "Git" },
     { name: "Bash" },
     { name: "Rate Limiting" },

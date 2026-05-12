@@ -10,6 +10,7 @@ export const DEVOPS_OTHER_SKILLS: ISkill = {
     { name: "Turborepo" },
     { name: "esbuild" },
     { name: "Docker" },
+    { name: "Railway" },
     { name: "CDN" },
     { name: "SSH" },
   ],
