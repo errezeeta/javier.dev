@@ -119,6 +119,12 @@ export default function CVDocument() {
             <Text style={styles.achievementItem}>• Fetches trending topics via SerpAPI, uses Gemini to generate optimized scripts, synthesizes voice with Google TTS.</Text>
             <Text style={styles.achievementItem}>• Renders vertical video with Shotstack and publishes to YouTube — 6+ API integrations automating the full content lifecycle.</Text>
           </View>
+          <View style={styles.role}>
+            <Text style={styles.roleTitle}>Second Brain — AI-Powered Knowledge Vault</Text>
+            <Text style={styles.roleCompany}>Railway · OpenCode · Telegram Bot · LLM Agents · Docker</Text>
+            <Text style={styles.achievementItem}>• Built a personal knowledge management system deployed on Railway with a Telegram bot interface.</Text>
+            <Text style={styles.achievementItem}>• Used OpenCode server mode as AI backend with a custom LLM agent schema for ingesting sources, maintaining a cross-referenced wiki, and synthesizing answers.</Text>
+          </View>
         </View>
 
         {/* Skills */}

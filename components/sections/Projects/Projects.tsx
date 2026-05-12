@@ -19,6 +19,21 @@ export default function Projects() {
             lifecycle with 6+ API integrations.
           </p>
         </div>
+        <div className="flex flex-col gap-1">
+          <h3 className="text-md font-bold print:text-md">
+            Second Brain — AI-Powered Knowledge Vault
+          </h3>
+          <p className="text-sm text-muted-foreground print:text-sm">
+            Railway · OpenCode · Telegram Bot · LLM Agents · Docker
+          </p>
+          <p className="text-md print:text-sm">
+            Built a personal knowledge management system deployed on Railway
+            with a Telegram bot interface. Used OpenCode server mode as AI
+            backend with a custom LLM agent schema for ingesting sources,
+            maintaining a cross-referenced wiki, and synthesizing answers from
+            stored knowledge.
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -10,7 +10,7 @@ export interface IRole {
 
 export default function Role({ role }: { role: IRole }) {
   return (
-    <div className="Role flex flex-col gap-1 px-1">
+    <div className="Role flex flex-col gap-1 px-2 overflow-hidden">
       <h3 className="text-md font-bold print:text-md">{role.title}</h3>
       <p className="text-md print:text-sm">{role.company}</p>
       <p className="text-md print:text-sm">{role.location}</p>
@@ -19,9 +19,9 @@ export default function Role({ role }: { role: IRole }) {
         <p className="text-md print:text-sm">{role.description}</p>
       )}
         {role.achievements.map((achievements, index) => (
-          <ul key={index} className="list-disc list-inside space-y-1 pl-1">
+          <ul key={index} className="list-disc list-outside ml-4 space-y-1">
             {achievements.map((achievement, index) => (
-              <li key={index} className="text-md print:text-sm">
+              <li key={index} className="text-md print:text-sm break-words">
                 {achievement}
               </li>
             ))}
