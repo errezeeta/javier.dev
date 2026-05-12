@@ -29,6 +29,12 @@ export const ROLES: IRole[] = [
         "Configured CI/CD with GitHub Actions for automated builds, S3 uploads, and Lambda function updates.",
         "Designed a database schema with 50+ models using Prisma, with universal soft-delete and audit logging patterns.",
       ],
+      [
+        "AI & Automation:",
+        "Built an SEO-focused landing page generator using n8n automation pipelines.",
+        "Configured the project development harness with skills and tooling for AI-assisted workflows (OpenCode, Claude Code, Copilot Cloud).",
+        "Set up a marketing agent (Hermes) using MCP and connectors to automate marketing tasks.",
+      ],
     ],
   },
   {
