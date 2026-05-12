@@ -11,5 +11,7 @@ export const API_INTEGRATION_SKILLS: ISkill = {
     { name: "Resend" },
     { name: "Svix" },
     { name: "PostHog" },
+    { name: "SerpAPI" },
+    { name: "YouTube API" },
   ],
 };

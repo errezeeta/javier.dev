@@ -6,6 +6,7 @@ import Experience from "@/components/sections/Experience/Experience";
 import Intro from "@/components/sections/Intro";
 import Skills from "@/components/sections/Skills/Skills";
 import Languages from "@/components/sections/Languages/Languages";
+import Projects from "@/components/sections/Projects/Projects";
 import Interests from "@/components/sections/Interests/Interests";
 import PrintButton from "@/components/PrintButton";
 import DownloadPDFButton from "@/components/DownlaodPDFButton";
@@ -19,6 +20,7 @@ export default function Home() {
       <CoreSkills />
       <About />
       <Experience />
+      <Projects />
       <Skills />
       <Education />
       <Languages />

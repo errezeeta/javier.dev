@@ -44,7 +44,7 @@ export default function CVDocument() {
         {/* Header */}
         <View style={styles.header}>
           <Text style={styles.name}>Javier Ramirez</Text>
-          <Text style={styles.title}>Mid-Junior software developer</Text>
+          <Text style={styles.title}>Full-Stack Software Engineer</Text>
         </View>
 
         {/* Contact */}
@@ -107,6 +107,18 @@ export default function CVDocument() {
               ))}
             </View>
           ))}
+        </View>
+
+        {/* Projects */}
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Projects</Text>
+          <View style={styles.role}>
+            <Text style={styles.roleTitle}>AI Video Automation Pipeline</Text>
+            <Text style={styles.roleCompany}>n8n · Gemini · YouTube API · Shotstack · SerpAPI</Text>
+            <Text style={styles.achievementItem}>• Built an end-to-end automated pipeline that generates and publishes YouTube Shorts daily.</Text>
+            <Text style={styles.achievementItem}>• Fetches trending topics via SerpAPI, uses Gemini to generate optimized scripts, synthesizes voice with Google TTS.</Text>
+            <Text style={styles.achievementItem}>• Renders vertical video with Shotstack and publishes to YouTube — 6+ API integrations automating the full content lifecycle.</Text>
+          </View>
         </View>
 
         {/* Skills */}

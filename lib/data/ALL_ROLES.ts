@@ -8,7 +8,7 @@ export const ROLES: IRole[] = [
     startDate: "2024",
     endDate: "Present",
     description:
-      "SaaS platform for cold chain logistics tracking and monitoring",
+      "Early-stage startup · Built the product from MVP to production with paying customers",
     achievements: [
       [
         "Architecture & Platform:",
