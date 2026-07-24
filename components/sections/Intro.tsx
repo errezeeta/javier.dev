@@ -2,59 +2,64 @@ import Image from "next/image";
 
 export default function Intro() {
   return (
-    <section className="flex flex-col items-center text-center pt-8 pb-4 animate-reveal">
-      {/* Photo */}
-      <div className="mb-7">
-        <div className="w-28 h-28 rounded-full overflow-hidden ring-1 ring-[hsl(var(--border))]">
+    <section className="flex flex-col items-center text-center pt-12 sm:pt-20 pb-4">
+      {/* Photo — large, circular, subtle shadow */}
+      <div className="mb-8 animate-enter">
+        <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden shadow-card">
           <Image
             src="/portait.JPG"
             alt="Javier Ramirez"
-            width={112}
-            height={112}
-            className="object-cover w-full h-full"
+            width={144}
+            height={144}
+            className="object-cover w-full h-full scale-105"
             priority
           />
         </div>
       </div>
 
-      {/* Name */}
-      <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-[hsl(var(--text-primary))]">
+      {/* Name — compressed, tight tracking like Vercel */}
+      <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-[-0.04em] leading-[1.05] text-[hsl(var(--text-primary))] animate-enter">
         Javier Ramirez
       </h1>
 
-      {/* One-liner */}
-      <p className="mt-3 text-base sm:text-lg text-[hsl(var(--text-secondary))] max-w-md text-balance leading-relaxed">
-        Software engineer in Barcelona. I build products end-to-end, from
-        architecture and APIs to deployment on AWS.
+      {/* Role — clean, understated */}
+      <p className="mt-4 text-lg sm:text-xl text-[hsl(var(--text-secondary))] font-light animate-enter">
+        Software Engineer
       </p>
 
-      {/* Links */}
-      <div className="flex items-center gap-5 mt-5 text-sm text-[hsl(var(--text-tertiary))]">
-        <a
-          href="mailto:jramirezsamc@gmail.com"
-          className="hover:text-[hsl(var(--text-primary))] transition-colors"
-        >
-          jramirezsamc@gmail.com
-        </a>
-        <span aria-hidden="true">·</span>
-        <a
+      {/* One-liner — personal, direct */}
+      <p className="mt-5 text-sm sm:text-base text-[hsl(var(--text-tertiary))] max-w-md leading-relaxed animate-enter">
+        I build products end-to-end — from architecture and APIs to deployment
+        on AWS. Based in Barcelona.
+      </p>
+
+      {/* Links — minimal, monospace labels */}
+      <div className="flex items-center gap-6 mt-8 animate-enter">
+        <LinkItem href="mailto:jramirezsamc@gmail.com" label="Email" />
+        <LinkItem
           href="https://github.com/errezeeta"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-[hsl(var(--text-primary))] transition-colors"
-        >
-          GitHub
-        </a>
-        <span aria-hidden="true">·</span>
-        <a
+          label="GitHub"
+        />
+        <LinkItem
           href="https://linkedin.com/in/javier-rz"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-[hsl(var(--text-primary))] transition-colors"
-        >
-          LinkedIn
-        </a>
+          label="LinkedIn"
+        />
       </div>
     </section>
+  );
+}
+
+function LinkItem({ href, label }: { href: string; label: string }) {
+  return (
+    <a
+      href={href}
+      target={label === "Email" ? undefined : "_blank"}
+      rel={label === "Email" ? undefined : "noopener noreferrer"}
+      className="group flex flex-col items-center gap-0.5"
+    >
+      <span className="font-mono text-[0.65rem] uppercase tracking-[0.15em] text-[hsl(var(--text-tertiary))] group-hover:text-[hsl(var(--accent))] transition-colors">
+        {label}
+      </span>
+    </a>
   );
 }

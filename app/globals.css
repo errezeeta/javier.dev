@@ -3,41 +3,43 @@
 @tailwind utilities;
 
 /* ============================================================
-   Javier Ramirez — Personal Site
-   Handcrafted, not generated. Typography-first, minimal.
+   Javier Ramirez · Personal Site
+   Typography-first. Dark-native. Handcrafted details.
+   Shadow-as-border technique from Vercel.
    ============================================================ */
 
 @layer base {
   :root {
-    --bg: 250 13% 96%;
-    --bg-elevated: 0 0% 100%;
-    --text-primary: 240 6% 10%;
-    --text-secondary: 240 4% 35%;
-    --text-tertiary: 240 4% 55%;
-    --border: 240 6% 90%;
-    --accent: 18 85% 45%;
-    --accent-foreground: 0 0% 100%;
-    --ring: 18 85% 45%;
+    /* Light mode — warm paper */
+    --bg: 40 20% 98%;
+    --bg-raised: 0 0% 100%;
+    --text-primary: 30 8% 5%;
+    --text-secondary: 30 4% 30%;
+    --text-tertiary: 30 3% 50%;
+    --border-color: 30 5% 88%;
+    --accent: 16 80% 42%;
+    --accent-soft: 16 60% 94%;
+    --ring: 16 80% 42%;
     --radius: 0.5rem;
   }
 
   .dark {
-    --bg: 240 6% 6%;
-    --bg-elevated: 240 6% 10%;
-    --text-primary: 240 4% 95%;
-    --text-secondary: 240 4% 60%;
-    --text-tertiary: 240 4% 40%;
-    --border: 240 6% 16%;
-    --accent: 18 85% 48%;
-    --accent-foreground: 0 0% 100%;
-    --ring: 18 85% 48%;
+    /* Dark mode — deep charcoal */
+    --bg: 30 6% 5%;
+    --bg-raised: 30 6% 8%;
+    --text-primary: 30 10% 94%;
+    --text-secondary: 30 5% 58%;
+    --text-tertiary: 30 5% 38%;
+    --border-color: 30 5% 13%;
+    --accent: 16 82% 48%;
+    --accent-soft: 16 30% 10%;
+    --ring: 16 82% 48%;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+  * { @apply border-[hsl(var(--border-color))]; }
+
   body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background: hsl(var(--bg));
@@ -46,26 +48,53 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
+
+  ::selection {
+    background: hsl(var(--accent) / 0.15);
+  }
 }
 
-/* ---- Utility classes ---- */
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* ---- Only animation: hero entrance ---- */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-enter {
+  animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.animate-enter:nth-child(1) { animation-delay: 0.05s; }
+.animate-enter:nth-child(2) { animation-delay: 0.12s; }
+.animate-enter:nth-child(3) { animation-delay: 0.19s; }
+
+/* ---- Shadow-as-border (Vercel technique) ---- */
+.shadow-border {
+  box-shadow: 0 0 0 1px hsl(var(--border-color));
+}
+.shadow-card {
+  box-shadow:
+    0 0 0 1px hsl(var(--border-color)),
+    0 1px 2px hsl(0 0% 0% / 0.04),
+    0 3px 6px -3px hsl(0 0% 0% / 0.04);
+}
+.dark .shadow-card {
+  box-shadow:
+    0 0 0 1px hsl(var(--border-color)),
+    0 1px 2px hsl(0 0% 0% / 0.2);
+}
+
+/* ---- Section label ---- */
+.section-label {
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: hsl(var(--text-tertiary));
+  margin-bottom: 1.5rem;
 }
 
 /* ---- Print ---- */
 @media print {
   .no-print { display: none !important; }
-  body { font-size: 10pt; }
-}
-
-/* ---- One animation. That's it. ---- */
-@keyframes reveal {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.animate-reveal {
-  animation: reveal 0.6s ease-out both;
+  body { font-size: 10pt; background: white; color: black; }
 }

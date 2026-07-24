@@ -1,47 +1,42 @@
 const projects = [
   {
     name: "AI Video Automation Pipeline",
-    url: null,
     stack: "n8n · Gemini · YouTube API · Shotstack · SerpAPI",
     description:
-      "End-to-end pipeline that generates and publishes YouTube Shorts daily — trending topic detection, script generation, voice synthesis, video rendering, and publishing. Six API integrations working together autonomously.",
+      "End-to-end pipeline that generates and publishes YouTube Shorts daily — trend detection, script generation with Gemini, voice synthesis, vertical video rendering, and publishing. Six API integrations working autonomously.",
   },
   {
     name: "Second Brain",
-    url: null,
     stack: "Railway · OpenCode · Telegram Bot · LLM Agents · Docker",
     description:
-      "Personal knowledge management system backed by LLM agents. Telegram bot interface, cross-referenced wiki, and contextual answer synthesis from stored knowledge.",
+      "Personal knowledge management system with AI agents and Telegram bot interface. Cross-referenced wiki, contextual answer synthesis from stored knowledge.",
   },
   {
     name: "FreeDSM",
-    url: null,
     stack: "C · Python · Flask · Docker · ESA Gaia",
     description:
-      "Low-cost IoT device for measuring light pollution. Custom firmware, sensor integration, Flask backends, and comparison pipelines against ESA satellite irradiance data. Built at IEEC.",
+      "Low-cost IoT device for measuring light pollution. Custom firmware, sensor integration, and comparison pipelines against ESA satellite irradiance data. Built at IEEC.",
   },
 ];
 
 export default function Projects() {
   return (
     <section className="w-full max-w-2xl mx-auto">
-      <h2 className="text-xs font-semibold uppercase tracking-widest text-[hsl(var(--text-tertiary))] mb-5">
-        Projects
-      </h2>
+      <h2 className="section-label">Projects</h2>
 
-      <div className="space-y-5">
+      <div className="space-y-3">
         {projects.map((p, i) => (
           <div
             key={i}
-            className="group rounded-lg border border-[hsl(var(--border))] bg-[hsl(var(--bg-elevated))] p-4 hover:border-[hsl(var(--text-tertiary))] transition-colors"
+            className="group rounded-xl shadow-card bg-[hsl(var(--bg-raised))] p-5 sm:p-6 hover:shadow-[0_0_0_1px_hsl(var(--border-color)),0_2px_4px_hsl(0_0%_0%/0.06),0_6px_12px_-4px_hsl(0_0%_0%/0.06)] transition-shadow duration-300"
           >
             <h3 className="text-sm font-semibold text-[hsl(var(--text-primary))]">
               {p.name}
             </h3>
-            <p className="mt-0.5 text-xs text-[hsl(var(--text-tertiary))] font-mono">
+            <p className="mt-1 font-mono text-[0.6875rem] uppercase tracking-[0.08em] text-[hsl(var(--text-tertiary))]">
               {p.stack}
             </p>
-            <p className="mt-2 text-sm text-[hsl(var(--text-secondary))] leading-relaxed">
+            <p className="mt-2 text-[0.8125rem] text-[hsl(var(--text-secondary))] leading-relaxed">
               {p.description}
             </p>
           </div>
