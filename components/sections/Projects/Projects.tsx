@@ -1,59 +1,48 @@
-import { ExternalLink } from "lucide-react";
-
 const projects = [
   {
     name: "AI Video Automation Pipeline",
+    url: null,
     stack: "n8n · Gemini · YouTube API · Shotstack · SerpAPI",
     description:
-      "End-to-end automated pipeline generating and publishing YouTube Shorts daily. Fetches trending topics via SerpAPI, generates scripts with Gemini, synthesizes voice with Google TTS, renders vertical video with Shotstack, and publishes to YouTube — fully automating the content creation lifecycle with 6+ API integrations.",
-    link: null,
+      "End-to-end pipeline that generates and publishes YouTube Shorts daily — trending topic detection, script generation, voice synthesis, video rendering, and publishing. Six API integrations working together autonomously.",
   },
   {
-    name: "Second Brain — AI-Powered Knowledge Vault",
+    name: "Second Brain",
+    url: null,
     stack: "Railway · OpenCode · Telegram Bot · LLM Agents · Docker",
     description:
-      "Personal knowledge management system with AI agents, Telegram bot interface, and containerized deployment on Railway. Uses LLM agents for ingesting sources, maintaining a cross-referenced wiki, and synthesizing answers from stored knowledge.",
-    link: null,
+      "Personal knowledge management system backed by LLM agents. Telegram bot interface, cross-referenced wiki, and contextual answer synthesis from stored knowledge.",
   },
   {
-    name: "FreeDSM — IoT Light-Pollution Monitor",
-    stack: "C/C++ · Sensors · Firmware · Python · Flask · Docker",
+    name: "FreeDSM",
+    url: null,
+    stack: "C · Python · Flask · Docker · ESA Gaia",
     description:
-      "Affordable, long-lasting IoT device measuring local irradiance for light-pollution studies. Integrated sensors, power management, data-logging, and comparison pipelines with ESA Gaia satellite data. Built at IEEC.",
-    link: null,
+      "Low-cost IoT device for measuring light pollution. Custom firmware, sensor integration, Flask backends, and comparison pipelines against ESA satellite irradiance data. Built at IEEC.",
   },
 ];
 
 export default function Projects() {
   return (
-    <section className="Projects flex flex-col items-center gap-5 print:gap-4 w-full">
-      <h2 className="text-2xl font-bold print:text-xl">Projects</h2>
-      <div className="grid gap-4 w-full">
-        {projects.map((project, index) => (
+    <section className="w-full max-w-2xl mx-auto">
+      <h2 className="text-xs font-semibold uppercase tracking-widest text-[hsl(var(--text-tertiary))] mb-5">
+        Projects
+      </h2>
+
+      <div className="space-y-5">
+        {projects.map((p, i) => (
           <div
-            key={index}
-            className="group flex flex-col gap-1.5 p-4 rounded-xl border border-border hover-card hover:border-primary/20 hover:bg-secondary/30 transition-all duration-300"
+            key={i}
+            className="group rounded-lg border border-[hsl(var(--border))] bg-[hsl(var(--bg-elevated))] p-4 hover:border-[hsl(var(--text-tertiary))] transition-colors"
           >
-            <div className="flex items-center gap-2">
-              <h3 className="text-md font-bold print:text-md">
-                {project.name}
-              </h3>
-              {project.link && (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors print:hidden"
-                >
-                  <ExternalLink className="h-3.5 w-3.5" />
-                </a>
-              )}
-            </div>
-            <p className="text-xs text-muted-foreground font-mono">
-              {project.stack}
+            <h3 className="text-sm font-semibold text-[hsl(var(--text-primary))]">
+              {p.name}
+            </h3>
+            <p className="mt-0.5 text-xs text-[hsl(var(--text-tertiary))] font-mono">
+              {p.stack}
             </p>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {project.description}
+            <p className="mt-2 text-sm text-[hsl(var(--text-secondary))] leading-relaxed">
+              {p.description}
             </p>
           </div>
         ))}

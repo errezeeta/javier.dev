@@ -1,18 +1,21 @@
-import { INTERESTS } from '@/lib/data/INTERESTS';
-import { Badge } from '@/components/ui/badge';
+import { INTERESTS } from "@/lib/data/INTERESTS";
 
 export default function Interests() {
   return (
-    <section className="Interests w-full flex flex-col gap-5 print:gap-2">
-      <h2 className="text-2xl font-bold text-center print:text-xl">Interests</h2>
-      <div className="flex flex-row flex-wrap gap-1 print:hidden">
-        {INTERESTS.map((interest, index) => (
-          <Badge className="text-nowrap" key={index}>{interest}</Badge>
+    <section className="w-full max-w-2xl mx-auto">
+      <h2 className="text-xs font-semibold uppercase tracking-widest text-[hsl(var(--text-tertiary))] mb-5">
+        Interests
+      </h2>
+      <div className="flex flex-wrap gap-2">
+        {INTERESTS.map((interest, i) => (
+          <span
+            key={i}
+            className="inline-flex text-xs px-2.5 py-1 rounded-md border border-[hsl(var(--border))] text-[hsl(var(--text-secondary))] bg-[hsl(var(--bg-elevated))]"
+          >
+            {interest}
+          </span>
         ))}
       </div>
-      <div className="hidden print:block">
-        {INTERESTS.join(', ')}
-      </div>
     </section>
-  )
+  );
 }

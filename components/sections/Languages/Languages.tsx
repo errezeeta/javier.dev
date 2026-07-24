@@ -1,25 +1,23 @@
-import { LANGUAGES } from '@/lib/data/LANGUAGES';
+import { LANGUAGES } from "@/lib/data/LANGUAGES";
 
 export default function Languages() {
   return (
-    <section className="Languages w-full flex flex-col gap-5 print:gap-2">
-      <h2 className="text-2xl font-bold text-center print:text-xl">Languages</h2>
-      <div className="flex flex-col gap-4 print:hidden">
-        {LANGUAGES.map((language, index) => (
-          <div key={index} className="flex flex-col gap-1">
-            <h3 className="text-lg font-bold">{language.flag} {language.name}</h3>
-            <p className="text-md">{language.proficiency}</p>
-          </div>
-        ))}
-      </div>
-      <div className="hidden print:flex flex-col gap-1 ">
-        {LANGUAGES.map((language, index) => (
-          <div key={index} className="flex flex-row gap-1">
-            <h3 className="text-md">{language.flag} {language.name}:</h3>
-            <p className="text-md">{language.proficiency}</p>
+    <section className="w-full max-w-2xl mx-auto">
+      <h2 className="text-xs font-semibold uppercase tracking-widest text-[hsl(var(--text-tertiary))] mb-5">
+        Languages
+      </h2>
+      <div className="flex flex-wrap gap-x-8 gap-y-2">
+        {LANGUAGES.map((lang, i) => (
+          <div key={i} className="flex items-baseline gap-2">
+            <span className="text-sm font-medium text-[hsl(var(--text-primary))]">
+              {lang.name}
+            </span>
+            <span className="text-sm text-[hsl(var(--text-secondary))]">
+              {lang.proficiency}
+            </span>
           </div>
         ))}
       </div>
     </section>
-  )
+  );
 }

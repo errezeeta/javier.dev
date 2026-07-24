@@ -9,58 +9,27 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://errezeeta.github.io/javier.dev"),
-  title: "Javier Ramirez | Full-Stack Software Engineer",
+  title: {
+    default: "Javier Ramirez — Software Engineer",
+    template: "%s | Javier Ramirez",
+  },
   description:
-    "Full-Stack Software Engineer based in Barcelona. Building SaaS products from MVP to production. Expertise in Next.js, TypeScript, AWS, and AI automation. Telematics Engineer (UPC-EETAC).",
-  keywords: [
-    "Javier Ramirez",
-    "Full-Stack Developer",
-    "Software Engineer",
-    "Next.js",
-    "TypeScript",
-    "React",
-    "AWS",
-    "Barcelona",
-    "Node.js",
-    "Express",
-    "DevOps",
-  ],
-  authors: [{ name: "Javier Ramirez", url: "https://github.com/errezeeta" }],
-  creator: "Javier Ramirez",
+    "Software Engineer in Barcelona. I build products end-to-end — from architecture to deployment. Previously at TrueCold, IEEC.",
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: "https://errezeeta.github.io/javier.dev",
-    title: "Javier Ramirez | Full-Stack Software Engineer",
+    siteName: "Javier Ramirez",
+    title: "Javier Ramirez — Software Engineer",
     description:
-      "Full-Stack Software Engineer based in Barcelona. Next.js, TypeScript, AWS, AI automation.",
-    siteName: "Javier Ramirez — Resume",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Javier Ramirez — Full-Stack Software Engineer",
-      },
-    ],
+      "Software Engineer in Barcelona. I build products end-to-end.",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Javier Ramirez | Full-Stack Software Engineer",
-    description:
-      "Full-Stack Software Engineer based in Barcelona. Next.js, TypeScript, AWS, AI automation.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -71,11 +40,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Javier Ramirez",
-              givenName: "Javier",
-              familyName: "Ramirez",
-              jobTitle: "Full-Stack Software Engineer",
+              jobTitle: "Software Engineer",
               email: "jramirezsamc@gmail.com",
-              telephone: "+34 622 62 11 81",
               url: "https://errezeeta.github.io/javier.dev",
               sameAs: [
                 "https://github.com/errezeeta",
@@ -86,21 +52,9 @@ export default function RootLayout({
                 addressLocality: "Barcelona",
                 addressCountry: "ES",
               },
-              knowsAbout: [
-                "Next.js",
-                "TypeScript",
-                "React",
-                "Node.js",
-                "Express",
-                "AWS",
-                "PostgreSQL",
-                "Prisma",
-                "Docker",
-                "CI/CD",
-              ],
               alumniOf: {
                 "@type": "CollegeOrUniversity",
-                name: "UPC - EETAC Castelldefels",
+                name: "UPC · EETAC Castelldefels",
               },
             }),
           }}

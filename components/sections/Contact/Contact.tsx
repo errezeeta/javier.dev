@@ -1,66 +1,36 @@
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 import { MailIcon } from "lucide-react";
-import { GitHubIcon } from '@/components/icons/GitHubIcon';
-import { LinkedInIcon } from '@/components/icons/LinkedInIcon';
+import { GitHubIcon } from "@/components/icons/GitHubIcon";
+import { LinkedInIcon } from "@/components/icons/LinkedInIcon";
 
 export default function Contact() {
   return (
-    <div className="flex gap-8 pt-1 text-sm text-muted-foreground flex-col sm:flex-row sm:items-baseline">
-      {process.env.NEXT_PUBLIC_EMAIL ? (
-        <div className="flex items-center gap-2">
-          <Button
-            className="size-8 print:hidden"
-            variant="outline"
-            size="icon"
-            asChild
-          >
-            <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} target='_blank'>
-              <MailIcon className="size-4" />
-            </a>
-          </Button>
-          <MailIcon className="size-4 hidden print:block" />
-          <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} target='_blank'>
-            {process.env.NEXT_PUBLIC_EMAIL}
-          </a>
-        </div>
-      ) : null}
-      {process.env.NEXT_PUBLIC_GITHUB_URL ? (
-        <div className="flex items-center gap-2">
-          <Button
-            className="size-8 print:hidden"
-            variant="outline"
-            size="icon"
-            asChild
-          >
-            <a href={process.env.NEXT_PUBLIC_GITHUB_URL} target='_blank'>
-              <GitHubIcon className="size-4" />
-            </a>
-          </Button>
-          <GitHubIcon className="size-4 hidden print:block" />
-          <a href={process.env.NEXT_PUBLIC_GITHUB_URL} target='_blank'>
-            {process.env.NEXT_PUBLIC_GITHUB_URL.replace('https://', '')}
-          </a>
-        </div>
-      ) : null}
-      
-      {process.env.NEXT_PUBLIC_LINKEDIN_URL ? (
-        <div className="flex items-center gap-2">
-          <Button
-            className="size-8 print:hidden"
-            variant="outline"
-            size="icon"
-            asChild
-          >
-            <a href={process.env.NEXT_PUBLIC_LINKEDIN_URL} target='_blank'>
-              <LinkedInIcon className="size-4" />
-            </a>
-          </Button>
-          <LinkedInIcon className="size-4 hidden print:block" />
-          <a href={process.env.NEXT_PUBLIC_LINKEDIN_URL} target='_blank'>
-            {process.env.NEXT_PUBLIC_LINKEDIN_URL.replace('https://www.', '')}
-          </a>
-        </div>
-      ) : null}
+    <div className="flex gap-6 text-sm text-[hsl(var(--text-secondary))] items-center">
+      <a
+        href="mailto:jramirezsamc@gmail.com"
+        className="inline-flex items-center gap-1.5 hover:text-[hsl(var(--text-primary))] transition-colors"
+      >
+        <MailIcon className="h-4 w-4" />
+        jramirezsamc@gmail.com
+      </a>
+      <a
+        href="https://github.com/errezeeta"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1.5 hover:text-[hsl(var(--text-primary))] transition-colors"
+      >
+        <GitHubIcon className="h-4 w-4" />
+        GitHub
+      </a>
+      <a
+        href="https://linkedin.com/in/javier-rz"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1.5 hover:text-[hsl(var(--text-primary))] transition-colors"
+      >
+        <LinkedInIcon className="h-4 w-4" />
+        LinkedIn
+      </a>
     </div>
-  )
+  );
 }

@@ -1,50 +1,40 @@
-"use client";
-
-import { MapPin, Briefcase, GraduationCap } from "lucide-react";
-
 export default function About() {
   return (
-    <section className="About flex flex-col items-center gap-6 print:my-4 w-full">
-      <h2 className="text-2xl font-bold text-center print:text-xl">About Me</h2>
+    <section className="w-full max-w-2xl mx-auto">
+      <h2 className="text-xs font-semibold uppercase tracking-widest text-[hsl(var(--text-tertiary))] mb-4">
+        About
+      </h2>
 
-      {/* Quick info cards */}
-      <div className="flex flex-wrap justify-center gap-3 text-sm print:hidden">
-        <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground">
-          <MapPin className="h-3.5 w-3.5" />
-          Barcelona, Spain
-        </div>
-        <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground">
-          <Briefcase className="h-3.5 w-3.5" />
-          3+ years experience
-        </div>
-        <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary text-secondary-foreground">
-          <GraduationCap className="h-3.5 w-3.5" />
-          UPC-EETAC · Telemática
-        </div>
-      </div>
+      <div className="space-y-4 text-[hsl(var(--text-secondary))] leading-relaxed">
+        <p>
+          I studied Telematics Engineering at{" "}
+          <strong className="text-[hsl(var(--text-primary))] font-medium">
+            UPC · EETAC Castelldefels
+          </strong>
+          . Since then, I&apos;ve worked across startups, research labs, and
+          open-source — always drawn to projects where I can shape both the
+          product and the technology underneath it.
+        </p>
 
-      {/* Bio */}
-      <div className="max-w-2xl text-center space-y-3">
-        <p className="text-base leading-relaxed text-muted-foreground">
-          Telematics Engineer (UPC-EETAC) with experience in{" "}
-          <strong className="text-foreground">early-stage startups</strong>{" "}
-          (TrueCold, 2024-present),{" "}
-          <strong className="text-foreground">research centers</strong>{" "}
-          (IEEC, ESA/Gaia), and{" "}
-          <strong className="text-foreground">open-source projects</strong>.
+        <p>
+          Right now I&apos;m at{" "}
+          <strong className="text-[hsl(var(--text-primary))] font-medium">
+            TrueCold
+          </strong>
+          , an early-stage startup where I built the platform from MVP to
+          production. Before that, at{" "}
+          <strong className="text-[hsl(var(--text-primary))] font-medium">
+            IEEC
+          </strong>{" "}
+          I worked on IoT devices and data pipelines for ESA&apos;s Gaia
+          satellite mission.
         </p>
-        <p className="text-base leading-relaxed text-muted-foreground">
-          I combine full-stack development (Next.js, Express, TypeScript) with{" "}
-          <strong className="text-foreground">DevOps on AWS</strong> (Lambda,
-          API Gateway, CI/CD) and IoT + AI systems. I thrive in environments
-          where I can own products end-to-end — from architecture decisions to
-          deployment.
-        </p>
-        <p className="text-base leading-relaxed text-muted-foreground">
-          Currently seeking teams with an{" "}
-          <strong className="text-foreground">ownership culture</strong> where I
-          can keep growing as a full-stack engineer or specialize in
-          backend/cloud.
+
+        <p>
+          I care about writing software that lasts — well-typed APIs, thoughtful
+          database schemas, CI/CD that doesn&apos;t break, and documentation
+          people actually read. I&apos;m equally comfortable in a Node.js
+          backend, a Next.js frontend, or an AWS console.
         </p>
       </div>
     </section>

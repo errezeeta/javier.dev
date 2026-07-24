@@ -1,105 +1,71 @@
 import About from "@/components/sections/About";
-import Contact from "@/components/sections/Contact/Contact";
-import CoreSkills from "@/components/sections/CoreSkills/CoreSkills";
-import Education from "@/components/sections/Education/Education";
-import Experience from "@/components/sections/Experience/Experience";
 import Intro from "@/components/sections/Intro";
-import Skills from "@/components/sections/Skills/Skills";
-import Languages from "@/components/sections/Languages/Languages";
+import Experience from "@/components/sections/Experience/Experience";
 import Projects from "@/components/sections/Projects/Projects";
+import Skills from "@/components/sections/Skills/Skills";
+import Education from "@/components/sections/Education/Education";
+import Languages from "@/components/sections/Languages/Languages";
 import Interests from "@/components/sections/Interests/Interests";
-import PrintButton from "@/components/PrintButton";
 import DownloadPDFButton from "@/components/DownlaodPDFButton";
-import { FloatingCVButton } from "@/components/floating-cv-button";
+import PrintButton from "@/components/PrintButton";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* Floating CV download button */}
-      <FloatingCVButton />
-
-      <div className="container flex flex-col items-center gap-12 print:gap-4 px-6 py-12 print:py-0 md:px-24 md:py-20 max-w-5xl mx-auto">
-        {/* Hero Section */}
-        <section className="w-full stagger-children">
-          <Intro />
-        </section>
-
-        {/* Contact Bar */}
-        <section className="animate-fade-in" style={{ animationDelay: "0.4s" }}>
-          <Contact />
-        </section>
-
-        {/* Core Skills Pills */}
-        <section className="w-full animate-fade-in" style={{ animationDelay: "0.5s" }}>
-          <CoreSkills />
-        </section>
+      <div className="mx-auto max-w-3xl px-6 py-16 sm:py-24 space-y-20 sm:space-y-28">
+        {/* Hero */}
+        <Intro />
 
         {/* About */}
-        <section className="w-full animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-          <div className="section-divider" />
-          <About />
-        </section>
+        <About />
 
         {/* Experience */}
-        <section className="w-full animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-          <div className="section-divider" />
-          <Experience />
-        </section>
+        <Experience />
 
         {/* Projects */}
-        <section className="w-full animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
-          <div className="section-divider" />
-          <Projects />
-        </section>
+        <Projects />
 
         {/* Skills */}
-        <section className="w-full animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
-          <div className="section-divider" />
-          <Skills />
-        </section>
+        <Skills />
 
         {/* Education */}
-        <section className="w-full animate-fade-in-up" style={{ animationDelay: "0.7s" }}>
-          <div className="section-divider" />
-          <Education />
-        </section>
-
-        {/* Languages */}
-        <section className="w-full animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
-          <div className="section-divider" />
-          <Languages />
-        </section>
-
-        {/* Interests */}
-        <section className="w-full animate-fade-in-up" style={{ animationDelay: "0.9s" }}>
-          <div className="section-divider" />
-          <Interests />
-        </section>
-
-        {/* Bottom CTA */}
-        <section className="w-full flex flex-col items-center gap-4 py-8 animate-fade-in"
-          style={{ animationDelay: "1s" }}>
-          <div className="section-divider" />
-          <p className="text-muted-foreground text-sm">
-            ¿Hablamos? — Let&apos;s talk!
-          </p>
-          <Contact />
-          <div className="flex gap-3 mt-4">
-            <DownloadPDFButton />
-            <PrintButton />
+        <section className="w-full max-w-2xl mx-auto">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-[hsl(var(--text-tertiary))] mb-5">
+            Education
+          </h2>
+          <div>
+            <h3 className="text-base font-semibold text-[hsl(var(--text-primary))]">
+              Telematics Engineering
+            </h3>
+            <p className="text-sm text-[hsl(var(--text-secondary))]">
+              UPC · EETAC Castelldefels
+            </p>
+            <p className="text-xs text-[hsl(var(--text-tertiary))] mt-1">
+              2017 — 2021
+            </p>
           </div>
         </section>
 
+        {/* Languages */}
+        <Languages />
+
+        {/* Interests */}
+        <Interests />
+
+        {/* Download */}
+        <section className="w-full max-w-2xl mx-auto flex items-center gap-3 no-print">
+          <DownloadPDFButton />
+          <PrintButton />
+        </section>
+
         {/* Footer */}
-        <footer className="text-center text-xs text-muted-foreground pb-8 print:hidden animate-fade-in"
-          style={{ animationDelay: "1.1s" }}>
+        <footer className="text-center text-xs text-[hsl(var(--text-tertiary))] no-print">
           <p>
-            Built with TypeScript, Next.js 14, Tailwind CSS &amp; shadcn/ui
-            {" · "}
             <a
               href="https://github.com/errezeeta/javier.dev"
               target="_blank"
-              className="underline hover:text-foreground transition-colors"
+              rel="noopener noreferrer"
+              className="hover:text-[hsl(var(--text-secondary))] transition-colors"
             >
               Source
             </a>
