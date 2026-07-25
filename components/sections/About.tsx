@@ -6,7 +6,7 @@ export default function About() {
       <div className="space-y-4 text-[hsl(var(--text-secondary))] text-[0.9375rem] leading-relaxed">
         <p>
           Telematics Engineer from{" "}
-          <strong className="text-[hsl(var(--text-primary))] font-medium">
+          <strong className="text-[hsl(var(--text-primary))] font-semibold">
             UPC · EETAC Castelldefels
           </strong>
           . I&apos;ve worked across startups, research labs, and open-source —
@@ -15,12 +15,12 @@ export default function About() {
         </p>
         <p>
           Currently at{" "}
-          <strong className="text-[hsl(var(--text-primary))] font-medium">
+          <strong className="text-[hsl(var(--text-primary))] font-semibold">
             TrueCold
           </strong>
           , where I built a multi-tenant SaaS platform from MVP to production.
           Previously at{" "}
-          <strong className="text-[hsl(var(--text-primary))] font-medium">
+          <strong className="text-[hsl(var(--text-primary))] font-semibold">
             IEEC
           </strong>
           , developing IoT hardware and data pipelines for ESA&apos;s Gaia

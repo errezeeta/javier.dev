@@ -28,12 +28,12 @@ export default function Projects() {
         {projects.map((p, i) => (
           <div
             key={i}
-            className="group rounded-xl shadow-card bg-[hsl(var(--bg-raised))] p-5 sm:p-6 hover:shadow-[0_0_0_1px_hsl(var(--border-color)),0_2px_4px_hsl(0_0%_0%/0.06),0_6px_12px_-4px_hsl(0_0%_0%/0.06)] transition-shadow duration-300"
+            className="group rounded-lg shadow-card bg-[hsl(var(--bg-raised))] p-4 sm:p-5"
           >
             <h3 className="text-sm font-semibold text-[hsl(var(--text-primary))]">
               {p.name}
             </h3>
-            <p className="mt-1 font-mono text-[0.6875rem] uppercase tracking-[0.08em] text-[hsl(var(--text-tertiary))]">
+            <p className="mt-1 font-mono text-[0.65rem] uppercase tracking-[0.1em] text-[hsl(var(--text-tertiary))]">
               {p.stack}
             </p>
             <p className="mt-2 text-[0.8125rem] text-[hsl(var(--text-secondary))] leading-relaxed">

@@ -1,11 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans, DM_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
 
-const inter = Inter({ subsets: ["latin"] });
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-dm-sans",
+});
+
+const dmMono = DM_Mono({
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+  display: "swap",
+  variable: "--font-dm-mono",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://errezeeta.github.io/javier.dev"),
@@ -19,8 +30,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Javier Ramirez",
     title: "Javier Ramirez — Software Engineer",
-    description:
-      "Software Engineer in Barcelona. I build products end-to-end.",
+    description: "Software Engineer in Barcelona. I build products end-to-end.",
   },
   robots: { index: true, follow: true },
 };
@@ -60,7 +70,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>
+      <body className={`${dmSans.variable} ${dmMono.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

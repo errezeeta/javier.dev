@@ -5,14 +5,11 @@ export default function Experience() {
     <section className="w-full max-w-2xl mx-auto">
       <h2 className="section-label">Experience</h2>
 
-      <div className="space-y-1">
+      <div className="space-y-6 pl-6 border-l border-[hsl(var(--border-color))]">
         {ROLES.map((role, i) => (
-          <div
-            key={i}
-            className="group rounded-xl shadow-card bg-[hsl(var(--bg-raised))] p-5 sm:p-6 hover:shadow-[0_0_0_1px_hsl(var(--border-color)),0_2px_4px_hsl(0_0%_0%/0.06),0_6px_12px_-4px_hsl(0_0%_0%/0.06)] transition-shadow duration-300"
-          >
-            {/* Header row */}
-            <div className="flex items-baseline justify-between gap-4 flex-wrap">
+          <div key={i} className="relative timeline-dot">
+            {/* Header */}
+            <div className="flex items-baseline justify-between gap-4 flex-wrap mb-2">
               <div>
                 <h3 className="text-base font-semibold text-[hsl(var(--text-primary))]">
                   {role.company}
@@ -26,15 +23,15 @@ export default function Experience() {
               </p>
             </div>
 
-            {/* Description */}
+            {/* Description tag */}
             {role.description && (
-              <p className="mt-2 text-xs text-[hsl(var(--text-tertiary))] uppercase tracking-wider font-medium">
+              <p className="text-[0.6875rem] text-[hsl(var(--text-tertiary))] uppercase tracking-wider font-medium mb-3">
                 {role.description}
               </p>
             )}
 
-            {/* Achievements — grouped by category */}
-            <div className="mt-3 space-y-3">
+            {/* Achievements */}
+            <div className="space-y-2.5">
               {role.achievements.map((group, gi) => (
                 <div key={gi}>
                   {group.map((item, ii) => {
@@ -43,7 +40,7 @@ export default function Experience() {
                       return (
                         <p
                           key={ii}
-                          className="text-[0.8125rem] font-medium text-[hsl(var(--text-primary))] mt-2 first:mt-0"
+                          className="text-[0.8125rem] font-semibold text-[hsl(var(--text-primary))] mt-2.5 first:mt-0 mb-1"
                         >
                           {item}
                         </p>

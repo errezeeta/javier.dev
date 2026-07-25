@@ -9,18 +9,18 @@ export function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
-  if (!mounted) return <div className="w-9 h-9" />;
+  if (!mounted) return <div className="w-8 h-8" />;
 
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="fixed top-5 right-5 z-50 w-9 h-9 flex items-center justify-center rounded-lg border border-[hsl(var(--border))] bg-[hsl(var(--bg-elevated))] text-[hsl(var(--text-secondary))] hover:text-[hsl(var(--text-primary))] transition-colors no-print"
+      className="fixed top-5 right-5 z-50 w-8 h-8 flex items-center justify-center rounded-md border border-[hsl(var(--border-color))] bg-[hsl(var(--bg-elevated))] text-[hsl(var(--text-tertiary))] hover:text-[hsl(var(--text-primary))] hover:border-[hsl(var(--accent)/0.3)] transition-all duration-200 no-print"
       aria-label="Toggle theme"
     >
       {theme === "dark" ? (
-        <Sun className="h-4 w-4" />
+        <Sun className="h-3.5 w-3.5" />
       ) : (
-        <Moon className="h-4 w-4" />
+        <Moon className="h-3.5 w-3.5" />
       )}
     </button>
   );
